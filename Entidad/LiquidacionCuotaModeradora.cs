@@ -13,14 +13,18 @@ namespace Entidad
         public string tipoAfilacion;
         public double salarioPaciente;
         public double valorServicion;
-
-        public LiquidacionCuotaModeradora(int numeroLiquidacion, int iDPaciente, string tipoAfilacion, double salarioPaciente, double valorServicion)
+        public string nombrePaciente;
+        public DateTime fechaLiquidacion;
+        public LiquidacionCuotaModeradora(int numeroLiquidacion, int iDPaciente,string nombrePaciente, string tipoAfilacion, 
+            double salarioPaciente, double valorServicion, DateTime fechaLiquidacion)
         {
             this.numeroLiquidacion = numeroLiquidacion;
             IDPaciente = iDPaciente;
             this.tipoAfilacion = tipoAfilacion;
             this.salarioPaciente = salarioPaciente;
             this.valorServicion = valorServicion;
+            this.fechaLiquidacion = fechaLiquidacion;
+            this.nombrePaciente = nombrePaciente;
         }
 
         public int calcularTarifa()
@@ -86,8 +90,8 @@ namespace Entidad
 
         public string toString()
         {
-            return $"{numeroLiquidacion};{IDPaciente};{tipoAfilacion};" +
-                $"{salarioPaciente};{valorServicion};{calcularTarifa()};{calcularCuota()}";
+            return $"{numeroLiquidacion};{IDPaciente};{nombrePaciente};{tipoAfilacion};" +
+                $"{salarioPaciente};{valorServicion};{calcularTarifa()};{calcularCuota()};{fechaLiquidacion}";
         }
 
     }

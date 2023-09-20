@@ -25,6 +25,11 @@ namespace Logica
             Console.WriteLine($"Informacion sobre {Liquidacion.numeroLiquidacion} guardada");
         }
 
+        public List<LiquidacionCuotaModeradora> Consultar()
+        {
+            return lista;
+        }
+
         public void Eliminar(LiquidacionCuotaModeradora liquidacionEliminada)
         {
             if (liquidacionEliminada is null)
@@ -52,6 +57,38 @@ namespace Logica
 
             return null;
         }
+
+        public List<LiquidacionCuotaModeradora> FiltroPorAfiliacion(String Afiliacion)
+        {
+            List<LiquidacionCuotaModeradora> listaFiltrada = null;
+
+            foreach (var Liquidacion in lista)
+            {
+                if (Liquidacion.tipoAfilacion == Afiliacion)
+                {
+                    listaFiltrada.Add(Liquidacion);
+                }
+            }
+
+            return listaFiltrada;
+        }
+
+        public List<LiquidacionCuotaModeradora> FiltroPorNombre(String Nombre)
+        {
+            List<LiquidacionCuotaModeradora> listaFiltrada = null;
+
+            foreach (var Liquidacion in lista)
+            {
+                if (Liquidacion.nombrePaciente == Nombre)
+                {
+                    listaFiltrada.Add(Liquidacion);
+                }
+            }
+
+            return listaFiltrada;
+        }
+
+
 
     }
 }
