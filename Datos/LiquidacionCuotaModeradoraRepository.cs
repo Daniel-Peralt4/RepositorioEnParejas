@@ -29,7 +29,6 @@ namespace Datos
             }
             return liquidaciones;
         }
-
         //Eliminar solicitando un numero
         public void EliminarLiquidacion()
         {
@@ -46,6 +45,17 @@ namespace Datos
         public void Modificar()
         {
 
+        }
+        public string ActualizarLista(List<LiquidacionCuotaModeradora> lista)
+        {
+            var escritor = new StreamWriter(FileName);
+
+            foreach(var item in lista)
+            { 
+                escritor.WriteLine(item.ToString());
+            }
+            escritor.Close();
+            return "Lista Actualizada";
         }
         private LiquidacionCuotaModeradora Mapeo(string linea)
         {

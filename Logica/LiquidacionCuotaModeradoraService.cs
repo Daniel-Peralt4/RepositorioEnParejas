@@ -17,27 +17,36 @@ namespace Logica
             Repositorio = new LiquidacionCuotaModeradoraRepository();
             lista = Repositorio.ConsultarTodas();
         }
-        public void Guardar(LiquidacionCuotaModeradora Liquidacion)
+        public string Guardar(LiquidacionCuotaModeradora Liquidacion)
         {
-            Repositorio.Guardar(Liquidacion);
-            Console.WriteLine($"Informacion sobre {Liquidacion.NumeroLiquidacion} guardada");
+            if (Liquidacion == null)
+            {
+                return "No se puede guardar una liquidacion nula o sin informacion";
+            }
+            else
+            {
+                var mensaje = Repositorio.Guardar(Liquidacion);
+                lista = Repositorio.ConsultarTodas();
+                return mensaje;
+            }
+
         }
-        public List<LiquidacionCuotaModeradora> Consultar()
+        public List<LiquidacionCuotaModeradora> ConsultarTodas()
         {
             return lista;
         }
-        public string Eliminar(LiquidacionCuotaModeradora liquidacionEliminada)
+        public string EliminarLiquidacion(LiquidacionCuotaModeradora liquidacionEliminada)
         {
             if (liquidacionEliminada is null)
             {
-                Console.WriteLine("LA PERSONA BUSCADA NO EXISTE");
+                return "LA PERSONA BUSCADA NO EXISTE";
             }
             else
             {
                 lista.Remove(BuscarId(liquidacionEliminada.NumeroLiquidacion));
+                var mensaje = Repositorio.ActualizarLista(lista);
+                return mensaje;
             }
-            var mensaje = Repositorio.Guardar(lista);
-            return mensaje;
         }
         public LiquidacionCuotaModeradora BuscarId(int ID)
         {
