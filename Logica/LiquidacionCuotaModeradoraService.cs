@@ -12,83 +12,69 @@ namespace Logica
     {
         public LiquidacionCuotaModeradoraRepository Repositorio = null;
         public List<LiquidacionCuotaModeradora> lista = null;
-
         public LiquidacionCuotaModeradoraService()
         {
             Repositorio = new LiquidacionCuotaModeradoraRepository();
             lista = Repositorio.ConsultarTodas();
         }
-
         public void Guardar(LiquidacionCuotaModeradora Liquidacion)
         {
             Repositorio.Guardar(Liquidacion);
-            Console.WriteLine($"Informacion sobre {Liquidacion.numeroLiquidacion} guardada");
+            Console.WriteLine($"Informacion sobre {Liquidacion.NumeroLiquidacion} guardada");
         }
-
         public List<LiquidacionCuotaModeradora> Consultar()
         {
             return lista;
         }
-
-        public void Eliminar(LiquidacionCuotaModeradora liquidacionEliminada)
+        public string Eliminar(LiquidacionCuotaModeradora liquidacionEliminada)
         {
             if (liquidacionEliminada is null)
             {
                 Console.WriteLine("LA PERSONA BUSCADA NO EXISTE");
-
             }
             else
             {
-                lista.Remove(buscarId(liquidacionEliminada.numeroLiquidacion));
-                Repositorio.Guardar(lista);
+                lista.Remove(BuscarId(liquidacionEliminada.NumeroLiquidacion));
             }
+            var mensaje = Repositorio.Guardar(lista);
+            return mensaje;
         }
-
-        public LiquidacionCuotaModeradora buscarId(int ID)
+        public LiquidacionCuotaModeradora BuscarId(int ID)
         {
             foreach (var LiquidacionBuscada in lista) { 
                 
-                if(LiquidacionBuscada.numeroLiquidacion == ID)
+                if(LiquidacionBuscada.NumeroLiquidacion == ID)
                 {
                     return LiquidacionBuscada;
                 }
-
             }
-
             return null;
         }
-
         public List<LiquidacionCuotaModeradora> FiltroPorAfiliacion(String Afiliacion)
         {
             List<LiquidacionCuotaModeradora> listaFiltrada = null;
 
             foreach (var Liquidacion in lista)
             {
-                if (Liquidacion.tipoAfilacion == Afiliacion)
+                if (Liquidacion.TipoAfilacion == Afiliacion)
                 {
                     listaFiltrada.Add(Liquidacion);
                 }
             }
-
             return listaFiltrada;
         }
-
         public List<LiquidacionCuotaModeradora> FiltroPorNombre(String Nombre)
         {
             List<LiquidacionCuotaModeradora> listaFiltrada = null;
 
             foreach (var Liquidacion in lista)
             {
-                if (Liquidacion.nombrePaciente == Nombre)
+                if (Liquidacion.NombrePaciente == Nombre)
                 {
                     listaFiltrada.Add(Liquidacion);
                 }
             }
-
             return listaFiltrada;
         }
-
-
-
     }
 }

@@ -8,45 +8,44 @@ namespace Entidad
 {
     public class LiquidacionCuotaModeradora
     {
-        public int numeroLiquidacion;
-        public int IDPaciente;
-        public string tipoAfilacion;
-        public double salarioPaciente;
-        public double valorServicion;
-        public string nombrePaciente;
-        public DateTime fechaLiquidacion;
-        public LiquidacionCuotaModeradora(int numeroLiquidacion, int iDPaciente,string nombrePaciente, string tipoAfilacion, 
-            double salarioPaciente, double valorServicion, DateTime fechaLiquidacion)
+        public LiquidacionCuotaModeradora() { }
+        public LiquidacionCuotaModeradora(int numeroLiquidacion, int iDPaciente, string nombrePaciente, string tipoAfilacion,
+            double salarioPaciente, double valorServicio, DateTime fechaLiquidacion)
         {
-            this.numeroLiquidacion = numeroLiquidacion;
+            NumeroLiquidacion = numeroLiquidacion;
             IDPaciente = iDPaciente;
-            this.tipoAfilacion = tipoAfilacion;
-            this.salarioPaciente = salarioPaciente;
-            this.valorServicion = valorServicion;
-            this.fechaLiquidacion = fechaLiquidacion;
-            this.nombrePaciente = nombrePaciente;
+            NombrePaciente = nombrePaciente;
+            TipoAfilacion = tipoAfilacion;
+            SalarioPaciente = salarioPaciente;
+            ValorServicio = valorServicio;
+            FechaLiquidacion = fechaLiquidacion;
         }
-
-        public int calcularTarifa()
+        public int NumeroLiquidacion { get; set; }
+        public int IDPaciente { get; set; }
+        public string NombrePaciente { get; set; }
+        public string TipoAfilacion { get; set; }
+        public double SalarioPaciente { get; set; }
+        public double ValorServicio { get; set; }
+        public DateTime FechaLiquidacion { get; set; }
+        public int CalcularTarifa()
         {
             double salarioMinimo= 1_000_000;
             int Tarifa = 0;
         
-            //Regimen  Contributivo
-            if(tipoAfilacion == "Contributivo")
+            if(TipoAfilacion == "Contributivo")
             {
-                if (salarioPaciente < 2*salarioMinimo )
+                if (SalarioPaciente < 2*salarioMinimo )
                 {
                     Tarifa = 15;
-                }else if (salarioPaciente >= 2*salarioMinimo && salarioPaciente < 5*salarioMinimo)
+                }else if ((SalarioPaciente >= 2*salarioMinimo) && (SalarioPaciente < 5*salarioMinimo))
                 {
                     Tarifa = 20;
-                }else if (salarioPaciente >= 5 * salarioMinimo)
+                }else if (SalarioPaciente >= 5 * salarioMinimo)
                 {
                     Tarifa = 25;
                 }
             }
-            else //Regimen Subsidiado
+            else if(TipoAfilacion == "Subsidiado")
             {
                 Tarifa = 5;
             }
@@ -54,14 +53,14 @@ namespace Entidad
             return Tarifa;
         }
 
-        public double calcularCuota()
+        public double CalcularCuota()
         {
             double cuotaModeradora;
-            double Tarifa= calcularTarifa();
+            double Tarifa= CalcularTarifa();
 
-            cuotaModeradora = valorServicion * Tarifa;
+            cuotaModeradora = ValorServicio * Tarifa;
 
-            if(tipoAfilacion == "Contributivo")
+            if(TipoAfilacion == "Contributivo")
             {
                 if(cuotaModeradora > 250_000)
                 {
@@ -86,13 +85,10 @@ namespace Entidad
 
             return cuotaModeradora;
         }
-
-
-        public string toString()
+        public override string ToString()
         {
-            return $"{numeroLiquidacion};{IDPaciente};{nombrePaciente};{tipoAfilacion};" +
-                $"{salarioPaciente};{valorServicion};{calcularTarifa()};{calcularCuota()};{fechaLiquidacion}";
+            return $"{NumeroLiquidacion};{IDPaciente};{NombrePaciente};{TipoAfilacion};" +
+                $"{SalarioPaciente};{ValorServicio};{CalcularTarifa()};{CalcularCuota()};{FechaLiquidacion}";
         }
-
     }
 }

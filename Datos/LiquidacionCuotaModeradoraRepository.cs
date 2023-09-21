@@ -20,7 +20,13 @@ namespace Datos
         }
         public List<LiquidacionCuotaModeradora> ConsultarTodas()
         {
-            var liquidaciones = new List<LiquidacionCuotaModeradora>;
+            var liquidaciones = new List<LiquidacionCuotaModeradora>();
+            var lector = new StreamReader(FileName);
+
+            while (!lector.EndOfStream)
+            {
+                liquidaciones.Add(Mapeo(lector.ReadLine()));
+            }
             return liquidaciones;
         }
 
@@ -40,6 +46,18 @@ namespace Datos
         public void Modificar()
         {
 
+        }
+        private LiquidacionCuotaModeradora Mapeo(string linea)
+        {
+            var liquidacion = new LiquidacionCuotaModeradora();
+            liquidacion.NumeroLiquidacion = int.Parse(linea.Split(';')[0]);
+            liquidacion.IDPaciente = int.Parse(linea.Split(';')[1]);
+            liquidacion.NombrePaciente = linea.Split(';')[2];
+            liquidacion.TipoAfilacion = linea.Split(';')[3];
+            liquidacion.SalarioPaciente = double.Parse(linea.Split(';')[4]);
+            liquidacion.ValorServicio = double.Parse(linea.Split(';')[5]);
+            liquidacion.FechaLiquidacion = DateTime.Parse(linea.Split(';')[6]);
+            return liquidacion;
         }
     }
 }
