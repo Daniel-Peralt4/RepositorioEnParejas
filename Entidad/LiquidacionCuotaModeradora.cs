@@ -9,13 +9,13 @@ namespace Entidad
     public class LiquidacionCuotaModeradora
     {
         public LiquidacionCuotaModeradora() { }
-        public LiquidacionCuotaModeradora(int numeroLiquidacion, int iDPaciente, string nombrePaciente, string tipoAfilacion,
+        public LiquidacionCuotaModeradora(int numeroLiquidacion, int iDPaciente, string nombrePaciente, string tipoAfiliacion,
             double salarioPaciente, double valorServicio, DateTime fechaLiquidacion)
         {
             NumeroLiquidacion = numeroLiquidacion;
             IDPaciente = iDPaciente;
             NombrePaciente = nombrePaciente;
-            TipoAfilacion = tipoAfilacion;
+            TipoAfiliacion = tipoAfiliacion;
             SalarioPaciente = salarioPaciente;
             ValorServicio = valorServicio;
             FechaLiquidacion = fechaLiquidacion;
@@ -23,7 +23,7 @@ namespace Entidad
         public int NumeroLiquidacion { get; set; }
         public int IDPaciente { get; set; }
         public string NombrePaciente { get; set; }
-        public string TipoAfilacion { get; set; }
+        public string TipoAfiliacion { get; set; }
         public double SalarioPaciente { get; set; }
         public double ValorServicio { get; set; }
         public DateTime FechaLiquidacion { get; set; }
@@ -32,7 +32,7 @@ namespace Entidad
             double salarioMinimo= 1_000_000;
             int Tarifa = 0;
         
-            if(TipoAfilacion == "Contributivo")
+            if(TipoAfiliacion == "Contributivo")
             {
                 if (SalarioPaciente < 2*salarioMinimo )
                 {
@@ -45,7 +45,7 @@ namespace Entidad
                     Tarifa = 25;
                 }
             }
-            else if(TipoAfilacion == "Subsidiado")
+            else if(TipoAfiliacion == "Subsidiado")
             {
                 Tarifa = 5;
             }
@@ -60,7 +60,7 @@ namespace Entidad
 
             cuotaModeradora = ValorServicio * Tarifa;
 
-            if(TipoAfilacion == "Contributivo")
+            if(TipoAfiliacion == "Contributivo")
             {
                 if(cuotaModeradora > 250_000)
                 {
@@ -87,8 +87,8 @@ namespace Entidad
         }
         public override string ToString()
         {
-            return $"{NumeroLiquidacion};{IDPaciente};{NombrePaciente};{TipoAfilacion};" +
-                $"{SalarioPaciente};{ValorServicio};{CalcularTarifa()};{CalcularCuota()};{FechaLiquidacion}";
+            return $"{NumeroLiquidacion};{IDPaciente};{NombrePaciente};{TipoAfiliacion};" +
+                $"{SalarioPaciente};{ValorServicio};{FechaLiquidacion.Year};{FechaLiquidacion.Month};{FechaLiquidacion.Day}";
         }
     }
 }

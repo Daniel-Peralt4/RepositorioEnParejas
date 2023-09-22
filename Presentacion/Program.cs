@@ -13,9 +13,10 @@ namespace Presentacion
 
     internal class Program
     {
+
+        
         static void Main(string[] args)
         {
-            LiquidacionCuotaModeradoraService liquidacionService = new LiquidacionCuotaModeradoraService();
 
             int opcion = 0;
             do
@@ -60,6 +61,8 @@ namespace Presentacion
         }
         private static void Guardar()
         {
+            LiquidacionCuotaModeradoraService liquidacionService = new LiquidacionCuotaModeradoraService();
+
             Console.Clear();
             Console.Write("Ingrese el numero de liquidacion: ");
             int NumeroLiquidacion = int.Parse(Console.ReadLine());
@@ -70,8 +73,21 @@ namespace Presentacion
             Console.Write("Ingrese el nombre del paciente: ");
             string NombrePaciente = Console.ReadLine();
 
-            Console.Write("Ingrese el tipo de afiliacion: ");
-            string TipoAfiliacion = Console.ReadLine();
+            string TipoAfiliacion;
+            do
+            {
+                Console.Write("Ingrese el tipo de afiliacion (1.Contributivo / 2.Subsidiado ): ");
+                TipoAfiliacion = Console.ReadLine();
+
+                if (TipoAfiliacion == "1")
+                {
+                    TipoAfiliacion = "Contributivo";
+                }
+                else
+                {
+                    TipoAfiliacion = "Subsidiado";
+                }
+            } while (TipoAfiliacion != "Subsidiado" && TipoAfiliacion != "Contributivo");
 
             Console.Write("Ingrese el salario del paciente: ");
             double SalarioPaciente = double.Parse(Console.ReadLine());
@@ -79,8 +95,7 @@ namespace Presentacion
             Console.Write("Ingrese el valor del servicio del paciente: ");
             double ValorServicio = double.Parse(Console.ReadLine());
 
-            Console.Write("Ingrese la fecha de liquidacion del paciente: ");
-            DateTime FechaLiquidacion = DateTime.Parse(Console.ReadLine());
+            DateTime FechaLiquidacion = DateTime.Now;
 
             LiquidacionCuotaModeradora nuevaLiquidacion = new LiquidacionCuotaModeradora(NumeroLiquidacion,
                 IdPaciente,NombrePaciente, TipoAfiliacion, SalarioPaciente, ValorServicio, FechaLiquidacion);
@@ -90,6 +105,8 @@ namespace Presentacion
         }
         private static void ConsultarTodas()
         {
+            LiquidacionCuotaModeradoraService liquidacionService = new LiquidacionCuotaModeradoraService();
+
             Console.Clear();
             Console.SetCursorPosition(15, 2); Console.Write("***Listado General***");
             Console.SetCursorPosition(10, 4); Console.Write("Numero de liquidacion");
@@ -104,12 +121,12 @@ namespace Presentacion
             {
 
                 Console.SetCursorPosition(15, 4 + posicion); Console.Write(item.NumeroLiquidacion);
-                Console.SetCursorPosition(29, 4 + posicion); Console.Write(item.IdPaciente);
+                Console.SetCursorPosition(29, 4 + posicion); Console.Write(item.IDPaciente);
                 Console.SetCursorPosition(42, 4 + posicion); Console.Write(item.NombrePaciente);
                 Console.SetCursorPosition(48, 4 + posicion); Console.Write(item.TipoAfiliacion);
                 Console.SetCursorPosition(59, 4 + posicion); Console.Write(item.SalarioPaciente);
                 Console.SetCursorPosition(68, 4 + posicion); Console.Write(item.ValorServicio);
-                Console.SetCursorPosition(75, 4 + posicion); Console.Write(item.FechaLiquidacion);
+                Console.SetCursorPosition(75, 4 + posicion); Console.Write($"{item.FechaLiquidacion.Day}/{item.FechaLiquidacion.Month}/{item.FechaLiquidacion.Year}");
                 posicion++;
             }
             Console.ReadKey();

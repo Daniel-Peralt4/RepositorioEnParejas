@@ -65,7 +65,7 @@ namespace Logica
 
             foreach (var Liquidacion in lista)
             {
-                if (Liquidacion.TipoAfilacion == Afiliacion)
+                if (Liquidacion.TipoAfiliacion == Afiliacion)
                 {
                     listaFiltrada.Add(Liquidacion);
                 }

@@ -1,0 +1,14 @@
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\bin\Debug\Entidad.dll
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\bin\Debug\Logica.dll
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\bin\Debug\Datos.dll
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\bin\Debug\Entidad.pdb
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\bin\Debug\Logica.pdb
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\bin\Debug\Datos.pdb
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Presentacion\obj\Debug\Presentacion.pdb

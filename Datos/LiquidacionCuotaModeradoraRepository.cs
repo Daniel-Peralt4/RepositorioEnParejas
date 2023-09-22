@@ -21,13 +21,23 @@ namespace Datos
         public List<LiquidacionCuotaModeradora> ConsultarTodas()
         {
             var liquidaciones = new List<LiquidacionCuotaModeradora>();
-            var lector = new StreamReader(FileName);
 
-            while (!lector.EndOfStream)
+            if (!File.Exists(FileName))
             {
-                liquidaciones.Add(Mapeo(lector.ReadLine()));
+                return liquidaciones;
             }
-            return liquidaciones;
+            else
+            {
+                var lector = new StreamReader(FileName);
+
+                while (!lector.EndOfStream)
+                {
+                    liquidaciones.Add(Mapeo(lector.ReadLine()));
+                }
+
+                lector.Close();
+                return liquidaciones;
+            }
         }
         public string ActualizarLista(List<LiquidacionCuotaModeradora> lista)
         {
@@ -42,14 +52,22 @@ namespace Datos
         }
         private LiquidacionCuotaModeradora Mapeo(string linea)
         {
+            int Año,Mes,Dia;
+
             var liquidacion = new LiquidacionCuotaModeradora();
             liquidacion.NumeroLiquidacion = int.Parse(linea.Split(';')[0]);
             liquidacion.IDPaciente = int.Parse(linea.Split(';')[1]);
             liquidacion.NombrePaciente = linea.Split(';')[2];
-            liquidacion.TipoAfilacion = linea.Split(';')[3];
+            liquidacion.TipoAfiliacion = linea.Split(';')[3];
             liquidacion.SalarioPaciente = double.Parse(linea.Split(';')[4]);
             liquidacion.ValorServicio = double.Parse(linea.Split(';')[5]);
-            liquidacion.FechaLiquidacion = DateTime.Parse(linea.Split(';')[6]);
+            
+            Año = int.Parse(linea.Split(';')[6]);
+            Mes = int.Parse(linea.Split(';')[7]);
+            Dia = int.Parse(linea.Split(';')[8]);
+
+            liquidacion.FechaLiquidacion = new DateTime(Año,Mes,Dia) ;
+
             return liquidacion;
         }
     }
