@@ -29,23 +29,6 @@ namespace Datos
             }
             return liquidaciones;
         }
-        //Eliminar solicitando un numero
-        public void EliminarLiquidacion()
-        {
-
-        }
-        public void ConsultaPorTipoAfiliacion()
-        {
-
-        }
-        public void ConsultaPorNombre()
-        {
-
-        }
-        public void Modificar()
-        {
-
-        }
         public string ActualizarLista(List<LiquidacionCuotaModeradora> lista)
         {
             var escritor = new StreamWriter(FileName);

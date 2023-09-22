@@ -10,8 +10,8 @@ namespace Logica
 {
     public class LiquidacionCuotaModeradoraService
     {
-        public LiquidacionCuotaModeradoraRepository Repositorio = null;
-        public List<LiquidacionCuotaModeradora> lista = null;
+        LiquidacionCuotaModeradoraRepository Repositorio = null;
+        private List<LiquidacionCuotaModeradora> lista = null;
         public LiquidacionCuotaModeradoraService()
         {
             Repositorio = new LiquidacionCuotaModeradoraRepository();
