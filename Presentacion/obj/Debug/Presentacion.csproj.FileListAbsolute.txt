@@ -26,3 +26,17 @@ C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Presentacion\obj\D
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\bin\Debug\Entidad.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\bin\Debug\Logica.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\bin\Debug\Datos.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\bin\Debug\Entidad.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\bin\Debug\Logica.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\bin\Debug\Datos.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Presentacion\obj\Debug\Presentacion.pdb

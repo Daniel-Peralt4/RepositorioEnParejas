@@ -27,25 +27,28 @@ namespace Entidad
         public double SalarioPaciente { get; set; }
         public double ValorServicio { get; set; }
         public DateTime FechaLiquidacion { get; set; }
+
         public int CalcularTarifa()
         {
             double salarioMinimo = 1_000_000;
             int Tarifa = 0;
-        
-            if(TipoAfiliacion == "Contributivo")
+
+            if (TipoAfiliacion == "Contributivo")
             {
-                if (SalarioPaciente < 2 * salarioMinimo )
+                if (SalarioPaciente < 2 * salarioMinimo)
                 {
                     Tarifa = 15;
-                }else if ((SalarioPaciente >= 2 * salarioMinimo) && (SalarioPaciente < 5 * salarioMinimo))
+                }
+                else if ((SalarioPaciente >= 2 * salarioMinimo) && (SalarioPaciente < 5 * salarioMinimo))
                 {
                     Tarifa = 20;
-                }else if (SalarioPaciente >= 5 * salarioMinimo)
+                }
+                else if (SalarioPaciente >= 5 * salarioMinimo)
                 {
                     Tarifa = 25;
                 }
             }
-            else if(TipoAfiliacion == "Subsidiado")
+            else if (TipoAfiliacion == "Subsidiado")
             {
                 Tarifa = 5;
             }
@@ -55,27 +58,52 @@ namespace Entidad
 
         public double CalcularCuota()
         {
-            double cuotaModeradora;
+            double cuotaReal;
             double Tarifa = CalcularTarifa();
 
-            cuotaModeradora = ValorServicio * Tarifa;
+            cuotaReal = ValorServicio * Tarifa;
 
-            if(TipoAfiliacion == "Contributivo")
+            return cuotaReal;
+        }
+
+        public string topeMaximo()
+        {
+            string topeMaximo = "SI";
+            double cuotaReal = CalcularCuota();
+            double cuotaAplicada = cuotaModeradora();
+
+            if (cuotaReal <= cuotaAplicada)
             {
-                if(cuotaModeradora > 250_000)
+                topeMaximo = "NO";
+            }
+
+            return topeMaximo;
+        }
+
+        public double cuotaModeradora()
+        {
+            double cuotaModeradora = CalcularCuota();
+            int Tarifa = CalcularTarifa();
+
+            if (TipoAfiliacion == "Contributivo")
+            {
+                if (cuotaModeradora > 250_000)
                 {
                     if (Tarifa == 15 && cuotaModeradora > 250_000)
                     {
                         cuotaModeradora = 250_000;
-                    }else if (Tarifa == 20 && cuotaModeradora > 900_000)
+                    }
+                    else if (Tarifa == 20 && cuotaModeradora > 900_000)
                     {
                         cuotaModeradora = 900_000;
-                    }else if(Tarifa == 15 && cuotaModeradora > 1_500_000)
+                    }
+                    else if (Tarifa == 25 && cuotaModeradora > 1_500_000)
                     {
                         cuotaModeradora = 1_500_000;
                     }
                 }
-            }else
+            }
+            else
             {
                 if (Tarifa == 5 && cuotaModeradora > 200_000)
                 {

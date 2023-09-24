@@ -16,3 +16,12 @@ C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Datos\obj\Debug\Da
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Datos\obj\Debug\Datos.dll
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Datos\obj\Debug\Datos.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Datos\bin\Debug\Datos.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Datos\bin\Debug\Datos.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Datos\bin\Debug\Entidad.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Datos\bin\Debug\Entidad.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Datos\obj\Debug\Datos.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Datos\obj\Debug\Datos.pdb

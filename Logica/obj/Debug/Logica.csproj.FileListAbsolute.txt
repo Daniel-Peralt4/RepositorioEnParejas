@@ -20,3 +20,14 @@ C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Logica\obj\Debug\L
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Logica\obj\Debug\Logica.csproj.CopyComplete
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Logica\obj\Debug\Logica.dll
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Logica\obj\Debug\Logica.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\bin\Debug\Logica.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\bin\Debug\Logica.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\bin\Debug\Datos.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\bin\Debug\Entidad.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\bin\Debug\Datos.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\bin\Debug\Entidad.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\obj\Debug\Logica.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Logica\obj\Debug\Logica.pdb

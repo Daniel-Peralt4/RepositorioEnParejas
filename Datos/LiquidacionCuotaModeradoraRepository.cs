@@ -43,8 +43,8 @@ namespace Datos
         {
             var escritor = new StreamWriter(FileName);
 
-            foreach(var item in lista)
-            { 
+            foreach (var item in lista)
+            {
                 escritor.WriteLine(item.ToString());
             }
             escritor.Close();
@@ -52,7 +52,7 @@ namespace Datos
         }
         private LiquidacionCuotaModeradora Mapeo(string linea)
         {
-            int Año,Mes,Dia;
+            int Año, Mes, Dia;
 
             var liquidacion = new LiquidacionCuotaModeradora();
             liquidacion.NumeroLiquidacion = int.Parse(linea.Split(';')[0]);
@@ -61,12 +61,12 @@ namespace Datos
             liquidacion.TipoAfiliacion = linea.Split(';')[3];
             liquidacion.SalarioPaciente = double.Parse(linea.Split(';')[4]);
             liquidacion.ValorServicio = double.Parse(linea.Split(';')[5]);
-            
+
             Año = int.Parse(linea.Split(';')[6]);
             Mes = int.Parse(linea.Split(';')[7]);
             Dia = int.Parse(linea.Split(';')[8]);
 
-            liquidacion.FechaLiquidacion = new DateTime(Año,Mes,Dia) ;
+            liquidacion.FechaLiquidacion = new DateTime(Año, Mes, Dia);
 
             return liquidacion;
         }

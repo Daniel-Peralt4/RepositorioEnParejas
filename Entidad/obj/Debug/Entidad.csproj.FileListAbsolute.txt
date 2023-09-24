@@ -10,3 +10,9 @@ C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\obj\Debug\
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\obj\Debug\Entidad.dll
 C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\obj\Debug\Entidad.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Entidad\bin\Debug\Entidad.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Entidad\bin\Debug\Entidad.pdb
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Entidad\obj\Debug\Entidad.csproj.AssemblyReference.cache
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Entidad\obj\Debug\Entidad.dll
+C:\Users\AndreaS\Source\Repos2\RepositorioEnParejas\Entidad\obj\Debug\Entidad.pdb
