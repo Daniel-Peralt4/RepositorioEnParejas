@@ -61,28 +61,44 @@ namespace Logica
         }
         public List<LiquidacionCuotaModeradora> FiltroPorAfiliacion(String Afiliacion)
         {
-            List<LiquidacionCuotaModeradora> listaFiltrada = null;
+            List<LiquidacionCuotaModeradora> listaFiltrada = new List<LiquidacionCuotaModeradora>();
+            bool listaVacia = true;
 
             foreach (var Liquidacion in lista)
             {
                 if (Liquidacion.TipoAfiliacion == Afiliacion)
                 {
                     listaFiltrada.Add(Liquidacion);
+                    listaVacia = false;
                 }
             }
+
+            if (listaVacia == true)
+            {
+                listaFiltrada = null;
+            }
+
             return listaFiltrada;
         }
         public List<LiquidacionCuotaModeradora> FiltroPorNombre(String Nombre)
         {
-            List<LiquidacionCuotaModeradora> listaFiltrada = null;
+            List<LiquidacionCuotaModeradora> listaFiltrada = new List<LiquidacionCuotaModeradora>();
+            bool listaVacia = true;
 
             foreach (var Liquidacion in lista)
             {
                 if (Liquidacion.NombrePaciente == Nombre)
                 {
                     listaFiltrada.Add(Liquidacion);
+                    listaVacia=false;
                 }
             }
+
+            if (listaVacia==true)
+            {
+                listaFiltrada = null;
+            }
+
             return listaFiltrada;
         }
     }
