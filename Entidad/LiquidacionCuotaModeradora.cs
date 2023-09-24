@@ -29,15 +29,15 @@ namespace Entidad
         public DateTime FechaLiquidacion { get; set; }
         public int CalcularTarifa()
         {
-            double salarioMinimo= 1_000_000;
+            double salarioMinimo = 1_000_000;
             int Tarifa = 0;
         
             if(TipoAfiliacion == "Contributivo")
             {
-                if (SalarioPaciente < 2*salarioMinimo )
+                if (SalarioPaciente < 2 * salarioMinimo )
                 {
                     Tarifa = 15;
-                }else if ((SalarioPaciente >= 2*salarioMinimo) && (SalarioPaciente < 5*salarioMinimo))
+                }else if ((SalarioPaciente >= 2 * salarioMinimo) && (SalarioPaciente < 5 * salarioMinimo))
                 {
                     Tarifa = 20;
                 }else if (SalarioPaciente >= 5 * salarioMinimo)
@@ -56,7 +56,7 @@ namespace Entidad
         public double CalcularCuota()
         {
             double cuotaModeradora;
-            double Tarifa= CalcularTarifa();
+            double Tarifa = CalcularTarifa();
 
             cuotaModeradora = ValorServicio * Tarifa;
 
@@ -64,7 +64,7 @@ namespace Entidad
             {
                 if(cuotaModeradora > 250_000)
                 {
-                    if (Tarifa ==15 && cuotaModeradora> 250_000)
+                    if (Tarifa == 15 && cuotaModeradora > 250_000)
                     {
                         cuotaModeradora = 250_000;
                     }else if (Tarifa == 20 && cuotaModeradora > 900_000)
@@ -77,7 +77,7 @@ namespace Entidad
                 }
             }else
             {
-                if (Tarifa==5 && cuotaModeradora>200_000)
+                if (Tarifa == 5 && cuotaModeradora > 200_000)
                 {
                     cuotaModeradora = 200_000;
                 }

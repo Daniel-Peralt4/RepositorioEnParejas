@@ -67,7 +67,7 @@ namespace Presentacion
             int IdPaciente = int.Parse(Console.ReadLine());
 
             Console.Write("Ingrese el nombre del paciente: ");
-            string NombrePaciente = Console.ReadLine();
+            string NombrePaciente = (Console.ReadLine());
 
             string TipoAfiliacion;
             do
@@ -140,7 +140,7 @@ namespace Presentacion
             string Nombre;
 
             Console.WriteLine("Ingrese el nombre a buscar");
-            Nombre= Console.ReadLine();
+            Nombre = Console.ReadLine();
 
             if (liquidacionService.FiltroPorNombre(Nombre) != null )            
             {

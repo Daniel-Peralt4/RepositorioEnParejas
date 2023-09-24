@@ -94,11 +94,10 @@ namespace Logica
                 }
             }
 
-            if (listaVacia==true)
+            if (listaVacia == true)
             {
                 listaFiltrada = null;
             }
-
             return listaFiltrada;
         }
     }
