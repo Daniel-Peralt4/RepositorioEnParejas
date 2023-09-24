@@ -10,14 +10,11 @@ using System.Threading.Tasks;
 
 namespace Presentacion
 {
-
     internal class Program
     {
-
-        
-        static void Main(string[] args)
+        LiquidacionCuotaModeradoraService liquidacionService = new LiquidacionCuotaModeradoraService();
+        public void Menu()
         {
-
             int opcion = 0;
             do
             {
@@ -58,10 +55,9 @@ namespace Presentacion
                         break;
                 }
             } while (opcion != 6);
-        }
-        private static void Guardar()
+        }    
+        private void Guardar()
         {
-            LiquidacionCuotaModeradoraService liquidacionService = new LiquidacionCuotaModeradoraService();
 
             Console.Clear();
             Console.Write("Ingrese el numero de liquidacion: ");
@@ -103,10 +99,8 @@ namespace Presentacion
             Console.WriteLine(liquidacionService.Guardar(nuevaLiquidacion));
             Console.ReadKey();
         }
-        private static void ConsultarTodas()
+        private void ConsultarTodas()
         {
-            LiquidacionCuotaModeradoraService liquidacionService = new LiquidacionCuotaModeradoraService();
-
             Console.Clear();
             Console.SetCursorPosition(15, 2); Console.Write("***Listado General***");
             Console.SetCursorPosition(2, 4); Console.Write("#liquidacion");
@@ -136,16 +130,14 @@ namespace Presentacion
             }
             Console.ReadKey();
         }
-        private static void EliminarLiquidacion()
+        private void EliminarLiquidacion()
         {
 
         }
-        private static void FiltroPorNombre()
+        private void FiltroPorNombre()
         {
             Console.Clear();
-            LiquidacionCuotaModeradoraService liquidacionService = new LiquidacionCuotaModeradoraService();
             string Nombre;
-
 
             Console.WriteLine("Ingrese el nombre a buscar");
             Nombre= Console.ReadLine();
@@ -189,10 +181,9 @@ namespace Presentacion
 
             Console.ReadKey();
         }
-        private static void FiltroPorAfiliacion()
+        private void FiltroPorAfiliacion()
         {
             Console.Clear();
-            LiquidacionCuotaModeradoraService liquidacionService = new LiquidacionCuotaModeradoraService();
             string TipoAfiliacion;
 
             do

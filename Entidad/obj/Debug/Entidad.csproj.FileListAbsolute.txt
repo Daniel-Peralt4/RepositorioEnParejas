@@ -4,3 +4,9 @@ C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Entidad\obj\Debug\
 C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
 C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Entidad\obj\Debug\Entidad.dll
 C:\Users\AndreaS\Pictures\alex\Proyectos Visual\TallerParejas\Entidad\obj\Debug\Entidad.pdb
+C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\bin\Debug\Entidad.dll
+C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\bin\Debug\Entidad.pdb
+C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\obj\Debug\Entidad.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\obj\Debug\Entidad.dll
+C:\Users\Usuario\OneDrive\Escritorio\PRACTICA C#\Solucion 2.0\Entidad\obj\Debug\Entidad.pdb
